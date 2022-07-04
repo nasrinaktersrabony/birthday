@@ -1,0 +1,23 @@
+
+
+
+{% extends 'index.html' %}
+{% block body %}
+  <div class='row'>
+    <div class='col-5 mx-auto'>
+      <h3>Edit user</h3><hr>
+      <form method='get' action='{{url_for("edit_user",uid=datas.id)}}'>
+        <div class='form-group'>
+          <label>User Name</label>
+          <input type='text' name='uname' required class='form-control' value='{{datas.name}}'>
+        </div>
+        <div class='form-group'>
+          <label>Contact</label>
+          <input type='text' name='ubd' required class='form-control' value='{{datas.birthdayT}}'>
+        </div>
+        <input type='submit' value='Submit' class='btn btn-primary'>
+      </form>
+    </div>
+  </div>
+{% endblock %}
+

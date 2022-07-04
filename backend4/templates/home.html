@@ -1,0 +1,25 @@
+{% extends 'index.html'}
+{% block body}
+<tr>
+    <form method='post' action='{{url_for("add_user")}}'>
+        <td> {{name}}</td>
+        <td> {{bd_date}}</td>
+        <td>
+            <form method="post" action="/editbd">
+                <input type="text" hidden value="{{id}}" name="id">
+                <input class="btn btn-warning" type="submit" value="Edit"
+                    onclick="update('{{id}}','{{name}}','{{bd_date}}')">
+            </form>
+        </td>
+
+        <td>
+            <form method="post" action="/deletebdd">
+                <input type="text" hidden value="{{id}}" name="id">
+                <input type="submit" class="btn btn-danger" value="Delete">
+            </form>
+        </td>
+    </form>
+</tr>
+{% endfor % }
+
+{% endblock % }

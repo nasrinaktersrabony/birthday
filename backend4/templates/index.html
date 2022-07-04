@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../../bid/static/index.css">
+    <style>
+        div {
+            padding: 50px;
+            background-color: rgba(56, 112, 234, 0.892);
+            text-align: center;
+            font-family: Verdana;
+            font-size: 45px;
+            color: rgb(246, 248, 248);
+        }
+    </style>
+    <style>
+        h1 {
+            padding: 50px;
+            text-align: center;
+        }
+
+        h2 {
+            padding: 50px;
+            text-align: center;
+        }
+
+        th,
+        td {
+            text-align: center;
+            border: 1px;
+            padding: 0.5rem;
+
+        }
+
+        tr:nth-child(even) {
+            background-color: #6fc4ee58;
+        }
+
+        table {
+            width: 100%;
+            padding: 5px;
+        }
+
+        form {
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>Birthdays</div>
+    <h1>Add a Birthday</h1>
+    <form action="/" method="post">
+        <input type="text" placeholder="Name" name="Name" />
+        <input type="date" placeholder="Date of Birth" name="Birthday" />
+        <input type="submit" value="Add Birthday" />
+    </form>
+    <div1>
+        <h2>All birthdays</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Birthday</th>
+                </tr>
+
+            <tbody>
+                {% block body %}
+                
+                {% endblock %}
+            </tbody>
+
+            </thead>
+
+        </table>
+    </div1>
+</body>
+
+</html>
